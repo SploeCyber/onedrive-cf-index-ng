@@ -7,7 +7,7 @@ module.exports = {
   // Make sure this is exactly the same as the email address you use to sign into your Microsoft account.
   // You can also put this in your worker's environment variable if you worry about
   // your email being exposed in public.
-  userPrincipalName: process.env.USER_PRINCIPLE_NAME || 'sploecyber@yvngc.onmicrosoft.com',
+  userPrincipalName: process.env.USER_PRINCIPLE_NAME || 'SploeCyber@yvngc.onmicrosoft.com',
 
   // [OPTIONAL] This is the website icon to the left of the title inside the navigation bar. It should be placed under the
   // /public directory of your GitHub project (not your OneDrive folder!), and referenced here by its relative path to /public.
@@ -39,20 +39,15 @@ module.exports = {
 
   // [OPTIONAL] This is where you specify the folders that are password protected. It is an array of paths pointing to all
   // the directories in which you have .password set. Check the documentation for details.
-  protectedRoutes: ['/Private', '/Demo/😎Another Private Folder Password 123'],
+  protectedRoutes: process.env.USER_PROTECTED_ROUTES,
 
   // [OPTIONAL] Use "" here if you want to remove this email address from the nav bar.
-  email: 'sploecyber@yvngc.onmicrosoft.com',
+  email: '',
 
   // [OPTIONAL] This is an array of names and links for setting your social information and links.
   // In the latest update, all brand icons inside font awesome is supported and the icon to render is based on the name
   // you provide. See the documentation for details.
-  links: [
-    {
-      name: 'GitHub',
-      link: 'https://github.com/lyc8503',
-    },
-  ],
+  links: [],
 
   // This is a day.js-style datetime format string to format datetimes in the app. Ref to
   // https://day.js.org/docs/en/display/format for detailed specification. The default value is ISO 8601 full datetime
